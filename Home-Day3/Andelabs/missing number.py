@@ -1,12 +1,18 @@
-a = [2, 5, 7, 8, 4]
-b = [2, 5, 7, 8, 4, 9, 10, 10]
-
-if len(a) == 0 and len(b) == 0:
-    print('Lists are empty')
-elif len(a) == len(b):
-    print('The lists are similar')
-elif len(a) > len(b):
-    print('List a is larger')
-elif len(a) < len(b):
-    pos = [item for item in b if item not in a]
-    print(pos)
+# Program that comapares two lists and returns the missing index
+def find_missing(lista,listb):
+  # Statement that checks whether the lists are empty 
+  if lista == [] and listb == []:
+    return 0
+  # Statement that checks whether the lists are equal to each other
+  if len(lista) == len(listb):
+    return 0
+  # Staement that checks whether list a is greater
+  if len(lista) > len(listb):
+  # If true returns the missing numbers 
+    pos = [item for item in lista if item not in listb]
+    print pos
+  # Staement that checks whether list b is greater
+  if len(lista) < len(listb):
+  # If true returns the missing numbers
+    pos = [item for item in listb if item not in lista]
+    print pos
